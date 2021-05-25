@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>远程管理平台服务端</title>
+    <meta data-n-head="ssr" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="static/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="static/css/stylesheet.css?v=1">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="static/bootstrap/3.3.7/js/bootstrap.js"></script>
+     <style type="text/css">
+
+         .btn_margin{
+             margin-top: 5px;
+             margin-left: 5px;
+         }
+
+        .heart {
+            animation: heart 1s ease infinite;
+        }
+
+        @keyframes heart {
+            0% {
+                /*border-color: red;*/
+                border-color: #1098EC;
+            }
+            100% {
+                border-color: #ffffff;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="loginPage" class="container text-center">
+
+        <div class="container">
+            <div class="card card-container">
+                <img id="profile-img" class="profile-img-card" src="static/images/meeting.jpeg" />
+                <p id="profile-name" class="profile-name-card"></p>
+                <div class="form-signin">
+                    <input type="text" id="roomnameInput" class="form-control" placeholder="房间号" value="Speed" required autofocus>
+
+                    <button class="btn btn-lg btn-primary btn-block btn-signin" id="roomBtn" type="submit">创建调度室</button>
+                    <a href="#" class="forgot-password">
+                     远程管理平台服务端
+                </a>
+                </div>
+                <!-- /form -->
+            </div>
+            <!-- /card-container -->
+        </div>
+        <!-- /container -->
+
+    </div>
+    <div id="callPage" class="call-page">
+        <div class="tip">
+            <span id="tip"></span>
+        </div>
+        <div id="videos-container"></div>
+        <div id="sub-videos-container"></div>
+    </div>
+    <footer>Copyright © 2021 WebRTC远程管理平台自研测试by Speed</footer>
+    <script src="monitor.js?v=1"></script>
+</body>
+
+</html>
